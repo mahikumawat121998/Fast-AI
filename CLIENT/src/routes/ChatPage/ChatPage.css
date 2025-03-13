@@ -1,0 +1,54 @@
+.chatPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .wrapper {
+    flex: 1;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto; /* Only show scrollbar when needed */
+    /* Webkit scrollbar styling (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #7f0606; /* Customize your color */
+      border-radius: 20px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: #f1f1f1; /* Customize your color */
+    }
+
+    /* Firefox scrollbar styling (partially supported) */
+    scrollbar-width: thin;
+    scrollbar-color: #555 #0e0c16;
+
+    .chat {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      p,
+      li {
+        margin: 10px 0px;
+      }
+
+      .message {
+        padding: 5px 20px;
+
+        &.user {
+          background-color: #2c2937;
+          border-radius: 20px;
+          max-width: 80%;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
